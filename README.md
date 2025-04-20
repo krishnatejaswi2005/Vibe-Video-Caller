@@ -55,6 +55,10 @@ Vibe Video Caller is a full-stack Zoom-like video conferencing web application b
 
 ## ⚙️ Getting Started
 
+### 🖥️ Deployment Info
+- **Frontend** is hosted on [Vercel](https://vercel.com/)
+- **Backend** is hosted on [Render](https://render.com/)
+
 ### 1. Clone the Repository
 
 ```bash
