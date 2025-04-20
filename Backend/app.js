@@ -4,6 +4,10 @@ import mongoose from "mongoose";
 import cors from "cors";
 import { connectToSocket } from "./controllers/socketManager.js";
 import userRoutes from "./routes/users.routes.js";
+import dotenv from "dotenv";
+dotenv.config();
+
+const MONGO_URL = process.env.MONGO_URL;
 
 const app = express();
 
@@ -35,9 +39,7 @@ app.get("/start", (req, res) => {
 
 const start = async () => {
 	try {
-		const db = await mongoose.connect(
-			"mongodb+srv://videoconference123:videoconference123@videoconference.u4cpp.mongodb.net/?retryWrites=true&w=majority&appName=Videoconference"
-		);
+		const db = await mongoose.connect(`${MONGO_URL}`);
 		console.log("Database connected");
 
 		server.listen(app.get("PORT"), () => {
