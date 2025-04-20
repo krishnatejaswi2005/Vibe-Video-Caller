@@ -1,0 +1,327 @@
+/* Landing Page CSS */
+
+.LandingPage {
+	min-height: 100dvh; /* modern reliable unit */
+	width: 100vw;
+	background-image: url("/background.png") !important;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	overflow-x: hidden;
+}
+
+.navbar {
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	padding: 1.1rem;
+	align-items: center;
+}
+
+.logo {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	font-size: 0.8rem;
+}
+.nav-links p {
+	cursor: pointer;
+}
+
+.nav-links p:hover {
+	transition: all 0.2s ease-in-out;
+	color: #d97400;
+}
+
+.LandingPageBody {
+	height: 80vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+
+.taglines {
+	padding-left: 3rem;
+	padding-right: 3rem;
+	display: flex;
+	flex-direction: column;
+	/* gap: 0.5rem; */
+	font-size: 1.2rem;
+}
+
+.mobiles {
+	padding-right: 3rem;
+}
+.mobiles img {
+	width: 27rem;
+}
+
+.button {
+	background-color: #d97400;
+	color: white;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	cursor: pointer;
+	margin-top: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	width: 10rem;
+	transition: all 0.2s ease-in-out;
+}
+
+/* Home Component CSS */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: linear-gradient(to right, #e0f2ff, #f4faff);
+}
+
+.meetContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: calc(100vh - 64px);
+	padding: 2rem;
+	box-sizing: border-box;
+	gap: 3rem;
+}
+
+.leftPanel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 45%;
+	padding: 2rem;
+	background-color: #ffffff;
+	border-radius: 20px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.leftPanel h3 {
+	color: #333;
+	margin-bottom: 1rem;
+	font-size: 1.6rem;
+	font-weight: 600;
+}
+
+.joinMeetingContainer {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.rightPanel {
+	width: 45%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rightPanel img {
+	width: 100%;
+	max-width: 450px;
+	object-fit: contain;
+}
+
+.navBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 24px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	flex-wrap: wrap;
+}
+
+.navBar h3 {
+	color: #1976d2;
+	margin: 0;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+.navBar div {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.navBar p {
+	margin: 0 6px;
+	color: #1976d2;
+	font-weight: 500;
+	font-size: 0.95rem;
+}
+
+@media screen and (max-width: 600px) {
+	.navBar {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 10px 16px;
+		gap: 10px;
+	}
+
+	.navBar h3 {
+		font-size: 1.3rem;
+	}
+
+	.navBar div {
+		width: 100%;
+		justify-content: space-between;
+	}
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+	.meetContainer {
+		flex-direction: column;
+		padding: 1rem;
+		gap: 2rem;
+	}
+
+	.leftPanel,
+	.rightPanel {
+		width: 100%;
+	}
+
+	.rightPanel img {
+		max-height: 250px;
+	}
+
+	.joinMeetingContainer {
+		flex-direction: column;
+	}
+}
+
+/* Landing Page CSS Responsive */
+
+/* RESPONSIVE LANDING PAGE */
+
+@media screen and (max-width: 1024px) {
+	.LandingPageBody {
+		flex-direction: column-reverse;
+		justify-content: center;
+		text-align: center;
+		gap: 2rem;
+		padding: 2rem 0;
+	}
+
+	.taglines {
+		padding: 0 2rem;
+		align-items: center;
+		font-size: 1rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.mobiles {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+	}
+
+	.mobiles img {
+		width: 20rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.mobiles img {
+		width: 15rem;
+		margin-top: 1rem;
+	}
+	.tagline {
+		font-size: 1.7rem !important;
+	}
+}
+
+/* Mobile hamburger and nav-links */
+@media screen and (max-width: 768px) {
+	.hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 25px;
+		height: 20px;
+		cursor: pointer;
+		z-index: 20;
+	}
+
+	.hamburger .bar {
+		height: 3px;
+		width: 100%;
+		background-color: white;
+		border-radius: 5px;
+	}
+
+	/* Initially hide nav links */
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		background-color: rgba(0, 0, 0, 0.9);
+		position: absolute;
+		top: 60px;
+		right: 0;
+		width: 100%;
+		text-align: center;
+		padding: 0.9rem 0;
+		z-index: 15;
+		transition: all 0.3s ease-in-out;
+		gap: 0.5rem;
+	}
+
+	/* Show nav links when menu is open */
+	.nav-links.open {
+		display: flex !important;
+	}
+
+	/* Optional: Improve clickable size on mobile */
+	.nav-links p {
+		font-size: 1rem;
+		padding: 0.5rem;
+	}
+	.mobiles img {
+		width: 15rem;
+		margin-top: 4.5rem;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.button {
+		margin-bottom: 2rem;
+	}
+	.navbar {
+		z-index: 20;
+		background: black;
+	}
+}
+
+@media screen and (max-width: 328px) {
+	.mobiles img {
+		width: 13rem;
+		margin-top: 6rem;
+	}
+	.tagline {
+		font-size: 1.7rem !important;
+	}
+}
