@@ -10,20 +10,24 @@ Vibe Video Caller is a full-stack Zoom-like video conferencing web application b
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **React.js (Vite)**
 - **Material UI (MUI)**
 - **CSS**
 
 ### Backend
+
 - **Node.js**
 - **Express.js**
 - **MongoDB**
 
 ### Authentication & Security
+
 - **bcrypt** – for hashing passwords
 - **crypto** – for secure encryption
 
 ### Real-Time Communication
+
 - **WebRTC** – peer-to-peer video/audio streaming
 - **Socket.IO** – real-time communication & signaling
 
@@ -32,16 +36,19 @@ Vibe Video Caller is a full-stack Zoom-like video conferencing web application b
 ## 📌 Features
 
 ### 🧑‍💻 Guest Mode
+
 - Join meetings as a guest without needing to sign up.
 - Enter a custom username (visible to other participants).
 - Preview video before joining the room.
 
 ### 🔐 Authentication
+
 - Register and log in with secure password hashing.
 - Create custom private rooms for confidential conversations.
 - Access history of previously hosted or joined meetings.
 
 ### 📹 In-Meeting Features
+
 - Real-time video and audio communication using WebRTC.
 - Toggle video/audio on or off anytime during the meeting.
 - Screen sharing functionality for collaborative work.
@@ -49,6 +56,7 @@ Vibe Video Caller is a full-stack Zoom-like video conferencing web application b
 - Option to leave or end the call for all users.
 
 ### 🕓 Meeting History
+
 - Logged-in users can view past meeting records with timestamps and room details.
 
 ---
@@ -56,6 +64,7 @@ Vibe Video Caller is a full-stack Zoom-like video conferencing web application b
 ## ⚙️ Getting Started
 
 ### 🖥️ Deployment Info
+
 - **Frontend** is hosted on [Vercel](https://vercel.com/)
 - **Backend** is hosted on [Render](https://render.com/)
 
@@ -97,7 +106,6 @@ The app should now be running on `http://localhost:5173` (or whichever port Vite
 
 ---
 
-
 ## 🙌 Acknowledgements
 
 - [WebRTC](https://webrtc.org/)
@@ -109,4 +117,3 @@ The app should now be running on `http://localhost:5173` (or whichever port Vite
 ---
 
 Feel free to fork the repo, open issues, or contribute!
-```
