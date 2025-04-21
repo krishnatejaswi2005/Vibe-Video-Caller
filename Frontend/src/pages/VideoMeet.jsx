@@ -67,6 +67,15 @@ export default function VideoMeet() {
 
 	let [connectionError, setConnectionError] = useState(null);
 
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const checkMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(
+			navigator.userAgent
+		);
+		setIsMobile(checkMobile);
+	}, []);
+
 	const getPermissions = async () => {
 		try {
 			const videoPermissions = await navigator.mediaDevices.getUserMedia({
@@ -864,11 +873,15 @@ export default function VideoMeet() {
 						<IconButton onClick={() => setAudio(!audio)}>
 							{audio ? <MicIcon /> : <MicOffIcon />}
 						</IconButton>
-						{screenAvailable && (
+
+						{!isMobile && screenAvailable ? (
 							<IconButton onClick={() => setScreen(!screen)}>
 								{screen ? <StopScreenShareIcon /> : <ScreenShareIcon />}
 							</IconButton>
+						) : (
+							<></>
 						)}
+
 						<Badge badgeContent={newMessages} max={99} color="secondary">
 							<IconButton onClick={() => setShowModal(!showModal)}>
 								{showModal ? <SpeakerNotesOffIcon /> : <ChatIcon />}
